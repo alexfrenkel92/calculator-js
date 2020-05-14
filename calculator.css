@@ -1,0 +1,66 @@
+* {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgba(223, 211, 170, 0.721);
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+.main > button {
+    cursor: pointer;
+    font-size: 20px;
+    outline: 1px solid black;
+    border: 0;
+    background-color: whitesmoke;
+}
+    
+#clear {
+    background-color: rgb(223, 59, 59);
+}
+
+.main > button:hover {
+    background: rgb(238, 235, 235);
+}
+
+.main > .operator {
+    background-color: rgb(243, 233, 154);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.display {
+    grid-column: 1 / -1; /* beteszi a display-t az elso kockaba: -1 es 1 vonal koze */
+    background: rgb(111, 110, 110);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column; /* egymas fole kerulnek, ahelyett, hogy egymas mellett lennenek */
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display .upper-display {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.display .lower-display {
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 2.5rem;
+}
