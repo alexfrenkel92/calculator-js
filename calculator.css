@@ -53,6 +53,8 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    outline: 1px solid black;
+    border: 0;
 }
 
 .display .upper-display {
